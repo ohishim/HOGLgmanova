@@ -1,0 +1,8 @@
+bibentry(
+  bibtype  = "Manual",
+  title    = "HOGLgmanova: Variable and basis function selections in GMANOVA model",
+  author   = "Ohishi, M.",
+  year     = 2025,
+  note     = "R package version 0.1.0",
+  url      = "https://github.com/ohishim/HOGLgmanova"
+)
