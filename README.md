@@ -1,49 +1,58 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# HOGLgmanova
+# HOGLgmanova (v0.1.0)
 
 <!-- badges: start -->
 
 <!-- badges: end -->
 
-The goal of HOGLgmanova is to …
+This package selects explanatory variables and polynomial degrees in
+GMANOVA model by hierarchical overlapping group Lasso (HOGL).
+
+**cite this package of the latest version:**  
+Ohishi, M. (2025). HOGLgmanova: Variable and basis function selections
+in GMANOVA model. R package version 0.1.0.
+<https://github.com/ohishim/HOGLgmanova>
 
 ## Installation
 
-You can install the development version of HOGLgmanova like so:
+You can install and use `HOGLgmanova` like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+devtools::install_github("ohishim/HOGLgmanova")
+library(HOGLgmanova)
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+You can get simulation data by `genData()` and implement HOGL estimation
+by `GMANOVA.HOGL()`. The simulation data is generated as
 
 ``` r
-library(HOGLgmanova)
-## basic example code
+n <- 100; p <- 10; k <- 10; q <- 6
+Data <- genData(n, p, k, q)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+You can obtain true trends as
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+Data$trend
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
-You can also embed plots, for example:
+Then, HOGL estimation is implemented as
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+``` r
+Y <- Data$Y; A <- Data$A; time.points <- Data$time.points
+res <- GMANOVA.HOGL(Y, A, time.points, q)
+```
+
+Estimated trends are
+
+``` r
+res$trend
+```
+
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />

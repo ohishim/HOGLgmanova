@@ -13,42 +13,53 @@ knitr::opts_chunk$set(
 )
 ```
 
-# HOGLgmanova
+# HOGLgmanova (v0.1.0)
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of HOGLgmanova is to ...
+This package selects explanatory variables and polynomial degrees in GMANOVA model by hierarchical overlapping group Lasso (HOGL).
+
+**cite this package of the latest version:**  
+Ohishi, M. (2025). HOGLgmanova: Variable and basis function selections in GMANOVA model. R package version 0.1.0. https://github.com/ohishim/HOGLgmanova
 
 ## Installation
 
-You can install the development version of HOGLgmanova like so:
+You can install and use `HOGLgmanova` like so:
 
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+```{r echo=F, message=F, warning=F}
+devtools::load_all()
+```
+
+```{r install, eval=F}
+devtools::install_github("ohishim/HOGLgmanova")
+library(HOGLgmanova)
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+You can get simulation data by `genData()` and implement HOGL estimation by `GMANOVA.HOGL()`.
+The simulation data is generated as
 
-```{r example, eval=F}
-library(HOGLgmanova)
-## basic example code
+```{r data}
+n <- 100; p <- 10; k <- 10; q <- 6
+Data <- genData(n, p, k, q)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
+You can obtain true trends as 
+```{r}
+Data$trend
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
+Then, HOGL estimation is implemented as 
 
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-# plot(pressure)
+```{r run}
+Y <- Data$Y; A <- Data$A; time.points <- Data$time.points
+res <- GMANOVA.HOGL(Y, A, time.points, q)
 ```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+Estimated trends are 
+```{r}
+res$trend
+```
+
