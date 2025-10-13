@@ -58,7 +58,7 @@ GMANOVA.HOGL <- function(
   if(n <= k){stop('`n` must be `n > k`')}
   if(p < q){stop('`p` must be `p >= q`')}
 
-  Vari <- defVari(Y, A, time.points, n, p, k, q, alpha, ONB)
+  Vari <- defVari(Y, A, time.points, n, p, k, q, alpha, ONB, norm2)
   for(i in 1:length(Vari)){assign(names(Vari)[i], Vari[[i]])}
 
   if(ONB)

@@ -2,7 +2,7 @@
 #   by GMANOVA_HOGL2/functions v1.2.0
 
 defVari <- function(
-    Y, A, time.points, n, p, k, q, alpha, ONB
+    Y, A, time.points, n, p, k, q, alpha, ONB, norm2
 ){
 
   ##############################################################################
