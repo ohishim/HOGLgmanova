@@ -123,7 +123,7 @@ GMANOVA.HOGL <- function(
 
       fit <- GMANOVA.HOGL.fit(
         U0, A, V, A.A, V.V, A.UV, n, k, p, q, lam, penW, L, THETA0, alpha,
-        tol, cw.update
+        tol, cw.update, norm2
       )
 
       THETA <- fit$THETA; df <- fit$df; egcv <- fit$EGCV
