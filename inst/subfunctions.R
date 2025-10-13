@@ -24,7 +24,7 @@ lamCand <- function(A.UV, penW, q, lamN, lamR=NULL){
 
 GMANOVA.HOGL.fit.MM <- function(
     U0, A, V, A.A, V.V, A.UV, n, k, p, q, lam, penW, L,
-    THETA0, alpha, tol, cw.update
+    THETA0, alpha, tol, cw.update, norm2
 ){
 
   lamW <- penW %>% map(~{lam*.x/L})
@@ -80,7 +80,7 @@ GMANOVA.HOGL.fit.MM <- function(
 
 GMANOVA.HOGL.fit.BCDM <- function(
     U0, A, V, A.A, V.V, A.UV, n, k, p, q, lam, penW, L=NULL,
-    THETA0, alpha, tol, cw.update
+    THETA0, alpha, tol, cw.update, norm2
 ){
 
   lamW <- penW %>% map(~{lam*.x})
