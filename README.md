@@ -7,8 +7,9 @@
 
 <!-- badges: end -->
 
-This package selects explanatory variables and polynomial degrees in
-GMANOVA model by hierarchical overlapping group Lasso (HOGL).
+This package selects explanatory variables and degrees of polynomial
+basis functions in GMANOVA model by hierarchical overlapping group Lasso
+(HOGL).
 
 **cite this package of the latest version:**  
 Ohishi, M. (2025). HOGLgmanova: Variable and basis function selections
