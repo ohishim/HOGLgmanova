@@ -57,3 +57,9 @@ res$trend
 ```
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+
+## Reference
+
+1.  Ohishi, M., Nagai, I., Oda, R. & Yanagihara, H. (2025). Hierarchical
+    overlapping group Lasso for GMANOVA model. arXiv:
+    [2510.19311](https://arxiv.org/abs/2510.19311).
