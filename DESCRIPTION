@@ -1,7 +1,7 @@
 Package: HOGLgmanova
 Type: Package
 Title: Variable and basis function selections in GMANOVA model
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: c(
     person(
       "Mineaki", "Ohishi",
@@ -24,6 +24,5 @@ Imports:
     ggplot2,
     magrittr,
     mvnfast,
-    pracma,
     purrr,
     tidyr

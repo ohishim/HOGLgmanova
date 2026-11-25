@@ -6,7 +6,6 @@
 #' @importFrom expm sqrtm
 #' @importFrom dplyr left_join
 #' @importFrom magrittr %>% multiply_by set_names set_colnames set_rownames
-#' @importFrom pracma gramSchmidt
 #' @importFrom purrr exec map map_dbl
 #'
 #' @param Y a matrix of response variables

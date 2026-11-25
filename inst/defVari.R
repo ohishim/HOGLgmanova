@@ -1,5 +1,4 @@
-# define variables
-#   by GMANOVA_HOGL2/functions v1.2.0
+# define variables (v0.2.0)
 
 defVari <- function(
     Y, A, time.points, n, p, k, q, alpha, ONB, norm2
@@ -51,9 +50,7 @@ defVari <- function(
 
   if(ONB)
   {
-    QR <- pracma::gramSchmidt(V[,q:1])
-    H <- QR$Q[,q:1]
-    Q <- QR$R[q:1, q:1]
+    QR <- qr(V[,q:1]); H <- (qr.Q(QR))[,q:1]; Q <- (qr.R(QR))[q:1, q:1]
 
     V.V <- diag(q)
 

@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# HOGLgmanova (v0.1.0)
+# HOGLgmanova (v0.2.0)
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 This package selects explanatory variables and degrees of polynomial basis functions in GMANOVA model by hierarchical overlapping group Lasso (HOGL).
 
 **cite this package of the latest version:**  
-Ohishi, M. (2025). HOGLgmanova: Variable and basis function selections in GMANOVA model. R package version 0.1.0. https://github.com/ohishim/HOGLgmanova
+Ohishi, M. (2026). HOGLgmanova: Variable and basis function selections in GMANOVA model. R package version 0.2.0. https://github.com/ohishim/HOGLgmanova
 
 ## Installation
 

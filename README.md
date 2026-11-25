@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# HOGLgmanova (v0.1.0)
+# HOGLgmanova (v0.2.0)
 
 <!-- badges: start -->
 
@@ -11,9 +11,9 @@ This package selects explanatory variables and degrees of polynomial
 basis functions in GMANOVA model by hierarchical overlapping group Lasso
 (HOGL).
 
-**cite this package of the latest version:**  
-Ohishi, M. (2025). HOGLgmanova: Variable and basis function selections
-in GMANOVA model. R package version 0.1.0.
+**cite this package of the latest version:**\
+Ohishi, M. (2026). HOGLgmanova: Variable and basis function selections
+in GMANOVA model. R package version 0.2.0.
 <https://github.com/ohishim/HOGLgmanova>
 
 ## Installation
